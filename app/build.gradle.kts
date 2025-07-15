@@ -1,21 +1,22 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.compose) // Compose compiler plugin is managed by AGP now
 }
 
 android {
-    namespace = "com.example.webviewapp"
+    namespace = "com.example.timeless"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.webviewapp"
+        applicationId = "com.example.timeless"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+//        buildConfigField("String", "WEBVIEW_URL", "\"https://timeless.ezassist.me/\"")
     }
 
     buildTypes {
@@ -48,8 +49,9 @@ dependencies {
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
-    implementation("androidx.core:core-splashscreen:1.0.1")
+    implementation(libs.androidx.material3) // Using Material 3
+    implementation(libs.androidx.core.splashscreen) // Ensure this is defined in libs.versions.toml
+    // implementation("com.google.android.material:material:1.11.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
