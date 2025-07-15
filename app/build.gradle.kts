@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.timeless"
+    namespace = "com.example.webviewapp"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.timeless"
+        applicationId = "com.example.webviewapp"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -51,7 +51,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3) // Using Material 3
     implementation(libs.androidx.core.splashscreen) // Ensure this is defined in libs.versions.toml
-    // implementation("com.google.android.material:material:1.11.0")
+    implementation("com.google.android.material:material:1.11.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -49,7 +49,7 @@ class MainActivity : ComponentActivity() {
                         contentAlignment = Alignment.Center
                     ) {
                         MyWebView(
-                            url = "https://https://timeless.ezassist.me/", // Replace with your website URL
+                            url = "https://timeless.ezassist.me", // Replace with your website URL
                             onPageFinished = {
                                 isLoading = false
                             },
