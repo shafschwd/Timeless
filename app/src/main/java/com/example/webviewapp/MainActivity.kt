@@ -93,6 +93,7 @@ fun MyWebView(
                     }
                 }
                 settings.javaScriptEnabled = true // Enable JavaScript if your website needs it
+                settings.domStorageEnabled = true
                 loadUrl(url)
             }
         },
